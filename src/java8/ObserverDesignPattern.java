@@ -8,7 +8,9 @@ public class ObserverDesignPattern {
         Subject subject = new Subject();
         new Observer(subject);
         new Observer(subject);
-        subject.setAnInt(4);
+
+        subject.setState1(4);
+
     }
 }
 
@@ -19,20 +21,20 @@ class Observer{
         this.subject.addObserver(this);
     }
     void update(){
-        System.out.println(subject.getAnInt());
 
-
+        System.out.println(subject.getState1());
     }
 }
 class Subject{
-    int anInt;
+    int state1;
     List<Observer> observers=new ArrayList<>();
-    int getAnInt(){
-        return anInt;
+    int getState1(){
+        return state1;
     }
 
-    void setAnInt(int anInt){
-        this.anInt = anInt;
+    void setState1(int state1){
+        this.state1 = state1;
+
         notifyObservers();
     }
     void notifyObservers(){
