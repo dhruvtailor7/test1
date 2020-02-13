@@ -5,8 +5,8 @@ interface Drawable{
 }
 public class LambdaExpressionExample1 {
     public static void main(String[] args) {
-        Drawable d= w -> System.out.println("Drawing "+w);
-        d.draw(5);
+        Drawable drawable= w -> System.out.println("Drawing "+w);
+        drawable.draw(5);
 
     }
 }
