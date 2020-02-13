@@ -1,4 +1,4 @@
 package java8;
 
-public class C1 {
+public class C1  {
 }
