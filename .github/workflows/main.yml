@@ -1,0 +1,12 @@
+name: Test Secret Logging
+
+on:
+  workflow_dispatch:  # This enables manual triggering
+
+jobs:
+  test-secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log Secret
+        run: |
+          echo "The secret value is: ${{ secrets.MY_SECRET }}"
